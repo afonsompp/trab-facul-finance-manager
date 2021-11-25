@@ -1,8 +1,11 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/postgres
-    username: root
+    url: jdbc:postgresql://localhost:5432/finance-manager
+    username: postgres
     password: root
   jpa:
     hibernate:
       ddl-auto: update
+jwt:
+  expiration: 134353
+  secret: 123456

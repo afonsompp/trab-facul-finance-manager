@@ -8,8 +8,11 @@ spring:
     hibernate:
       ddl-auto: update
     properties:
-      hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
-server:
-  servlet:
-    context-path: /finance-manager/api
+        hibernate:
+          dialect: org.hibernate.dialect.PostgreSQLDialect
+  server:
+    servlet:
+      context-path: /finance-manager/api
+  jwt:
+    expiration: ${JWT_EXPIRATION}
+    secret: ${JWT_SECRET}
