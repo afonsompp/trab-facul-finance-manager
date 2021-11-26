@@ -20,13 +20,13 @@ public class Transaction {
 	@Column(nullable = false)
 	private BigDecimal amount;
 	@Column(nullable = false)
-	private Long userId;
+	private String userId;
 	
 	@Column(updatable = false)
 	@CreationTimestamp
 	private LocalDateTime createdAt;
 	
-	public Transaction(TransactionType type, String description, BigDecimal amount, Long userId) {
+	public Transaction(TransactionType type, String description, BigDecimal amount, String userId) {
 		this.type = type;
 		this.description = description;
 		this.amount = amount;
@@ -52,7 +52,7 @@ public class Transaction {
 		return amount;
 	}
 	
-	public Long getUserId() {
+	public String getUserId() {
 		return userId;
 	}
 	

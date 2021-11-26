@@ -20,7 +20,7 @@ public class TransactionRequest {
 	private BigDecimal amount;
 	@NotNull
 	@Positive
-	private Long userId;
+	private String userId;
 	
 	public TransactionRequest() {
 	}
@@ -37,7 +37,7 @@ public class TransactionRequest {
 		return amount;
 	}
 	
-	public Long getUserId() {
+	public String getUserId() {
 		return userId;
 	}
 	
