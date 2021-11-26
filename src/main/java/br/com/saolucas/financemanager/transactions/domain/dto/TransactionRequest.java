@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 
 public class TransactionRequest {
 	
-	@NotNull
+	@NotBlank
 	private String type;
 	@NotBlank
 	private String description;
