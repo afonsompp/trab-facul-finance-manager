@@ -1,7 +1,6 @@
 package br.com.saolucas.financemanager.transactions.domain.dto;
 
 import br.com.saolucas.financemanager.transactions.domain.Transaction;
-import br.com.saolucas.financemanager.transactions.validator.ValidTransactionType;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -9,6 +8,7 @@ import javax.validation.constraints.Positive;
 import java.math.BigDecimal;
 
 public class TransactionRequest {
+	
 	@NotNull
 	private String type;
 	@NotBlank
