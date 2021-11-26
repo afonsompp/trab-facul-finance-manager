@@ -14,7 +14,6 @@ public class TransactionRequest {
 	@NotBlank
 	private String description;
 	@NotNull
-	@Positive
 	private BigDecimal amount;
 	@NotBlank
 	private String userId;
