@@ -18,8 +18,7 @@ public class TransactionRequest {
 	@NotNull
 	@Positive
 	private BigDecimal amount;
-	@NotNull
-	@Positive
+	@NotBlank
 	private String userId;
 	
 	public TransactionRequest() {
