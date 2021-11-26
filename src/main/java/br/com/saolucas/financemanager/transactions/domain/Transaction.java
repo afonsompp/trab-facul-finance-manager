@@ -14,7 +14,7 @@ public class Transaction {
 	private Long id;
 	@Enumerated(EnumType.STRING)
 	@Column(nullable = false)
-	private TransactionType type;
+	private String type;
 	@Column(nullable = false)
 	private String description;
 	@Column(nullable = false)
@@ -26,7 +26,7 @@ public class Transaction {
 	@CreationTimestamp
 	private LocalDateTime createdAt;
 	
-	public Transaction(TransactionType type, String description, BigDecimal amount, String userId) {
+	public Transaction(String type, String description, BigDecimal amount, String userId) {
 		this.type = type;
 		this.description = description;
 		this.amount = amount;
@@ -40,7 +40,7 @@ public class Transaction {
 		return id;
 	}
 	
-	public TransactionType getType() {
+	public String getType() {
 		return type;
 	}
 	

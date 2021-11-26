@@ -1,7 +1,6 @@
 package br.com.saolucas.financemanager.transactions.domain.dto;
 
 import br.com.saolucas.financemanager.transactions.domain.Transaction;
-import br.com.saolucas.financemanager.transactions.domain.TransactionType;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -11,7 +10,7 @@ import java.util.stream.Collectors;
 public class TransactionResponse {
 	
 	private Long id;
-	private TransactionType type;
+	private String type;
 	private String description;
 	private BigDecimal amount;
 	private LocalDateTime createdAt;
@@ -32,7 +31,7 @@ public class TransactionResponse {
 		return id;
 	}
 	
-	public TransactionType getType() {
+	public String getType() {
 		return type;
 	}
 	
