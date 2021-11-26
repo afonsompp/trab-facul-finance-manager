@@ -40,7 +40,7 @@ public class TransactionController {
 	
 	@GetMapping("/{userId}")
 	public ResponseEntity<List<TransactionResponse>> transactionsByUserId(
-			@NotNull @PathVariable("userId") Long userId) {
+			@NotNull @PathVariable("userId") String userId) {
 		List<Transaction> transactions = transactionRepository.findByUserId(userId);
 		
 		if (transactions.isEmpty())
